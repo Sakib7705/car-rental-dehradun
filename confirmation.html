@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Booking Confirmation Voucher | Car Rental Dehradun</title>
+  <meta name="robots" content="noindex, nofollow">
+  
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/png" href="images/icons/icon-192.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">🚗</div>
+        <div>Car Rental <span class="highlight">Dehradun</span></div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cars.html">Our Cars</a>
+        <a href="book.html">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+918923665501" class="header-phone-btn">
+          <span>📞</span>
+          <span class="phone-text">+91 8923665501</span>
+        </a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Confirmation Voucher Container -->
+  <main class="section">
+    <div class="container confirmation-wrap" id="confirmationContainer">
+      <div style="text-align:center; padding:3rem 1rem;">
+        <p>Loading your booking confirmation voucher...</p>
+      </div>
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer" style="margin-top:auto;">
+    <div class="container footer-bottom" style="border-top:none; padding-top:0;">
+      <div>&copy; 2026 Car Rental Dehradun • Phone / WhatsApp: +91 8923665501</div>
+      <div><a href="index.html" style="color:var(--accent);">Return to Home</a></div>
+    </div>
+  </footer>
+
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/pwa.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initConfirmationPage();
+    });
+  </script>
+</body>
+</html>

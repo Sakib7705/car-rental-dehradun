@@ -1,0 +1,327 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Vehicle Details | Car Rental Dehradun</title>
+  <meta name="description" content="Rent this self-drive car in Dehradun with 200 KM daily allowance. Check live availability, prices, specifications, and book instantly on WhatsApp.">
+  <link rel="canonical" href="https://car-rental-dehradun.com/car-details.html">
+
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/png" href="images/icons/icon-192.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Offline Status Banner -->
+  <div id="offlineBanner" class="offline-banner">
+    ⚠️ You are currently offline. Booking confirmation and real-time availability checks require an active internet connection.
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">🚗</div>
+        <div>Car Rental <span class="highlight">Dehradun</span></div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cars.html" class="active">Our Cars</a>
+        <a href="locations/index.html">Locations</a>
+        <a href="destinations/index.html">Destinations</a>
+        <a href="travel-guides/index.html">Travel Guides</a>
+        <a href="book.html">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+918923665501" class="header-phone-btn">
+          <span>📞</span>
+          <span class="phone-text">+91 8923665501</span>
+        </a>
+        <a href="https://wa.me/918923665501" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <span>💬 WhatsApp</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-content">
+      <a href="index.html">🏠 Home</a>
+      <a href="cars.html" class="active">🚗 Our Cars & Pricing</a>
+      <a href="locations/index.html">📍 Rental Locations</a>
+      <a href="destinations/index.html">⛰️ Destinations</a>
+      <a href="travel-guides/index.html">📖 Travel Guides</a>
+      <a href="book.html">📅 Book a Car</a>
+      <a href="terms.html">📋 Rental Terms & Documents</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="contact.html">📞 Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Breadcrumbs -->
+  <div style="background:var(--bg-alt); padding:0.75rem 0; border-bottom:1px solid var(--border); font-size:0.88rem;">
+    <div class="container">
+      <a href="index.html" style="color:var(--primary)">Home</a> / 
+      <a href="cars.html" style="color:var(--primary)">Cars</a> / 
+      <span id="breadcrumbCarName" style="color:var(--text-muted)">Vehicle Details</span>
+    </div>
+  </div>
+
+  <!-- Main Vehicle Details Content -->
+  <main class="section">
+    <div class="container car-details-grid">
+      
+      <!-- Left Column: Gallery, Specs & Why Rent -->
+      <div class="details-main-col">
+        <div class="gallery-main">
+          <img id="detailMainImage" src="images/cars/swift-dzire.webp" alt="Car Photo">
+        </div>
+        <div class="gallery-thumbs" id="detailThumbs">
+          <!-- Populated by JS -->
+        </div>
+
+        <div style="margin-top:2rem;">
+          <h1 id="detailCarTitle" style="font-size:2rem; margin-bottom:0.25rem;">Car Name</h1>
+          <p id="detailCarCategory" style="font-size:1rem; color:var(--primary); font-weight:600; margin-bottom:1.25rem;">Sedan • Manual • Petrol</p>
+          <p id="detailDescription" style="font-size:1rem; line-height:1.6; color:var(--text-muted); margin-bottom:2rem;">Vehicle description loading...</p>
+        </div>
+
+        <!-- 200 KM/Day Limit & Pricing Info Banner -->
+        <div style="background:linear-gradient(135deg, #042f2e, #0f766e); color:#fff; border-radius:var(--radius-lg); padding:1.5rem; margin-bottom:2rem; box-shadow:var(--shadow-md);">
+          <div style="display:flex; align-items:center; justify-content:space-between; flex-wrap:wrap; gap:1rem;">
+            <div>
+              <span style="background:rgba(255,255,255,0.2); padding:0.25rem 0.65rem; border-radius:var(--radius-full); font-size:0.75rem; font-weight:700; text-transform:uppercase;">Standard Rental Policy</span>
+              <h3 style="color:#fff; font-size:1.4rem; margin-top:0.35rem;">🚀 200 KM Included Per Day</h3>
+              <p style="color:#ccfbf1; font-size:0.88rem;">Sufficient mileage for Dehradun, Mussoorie, Dhanaulti, Rishikesh & Haridwar day trips.</p>
+            </div>
+            <div style="text-align:right;">
+              <div style="font-size:1.8rem; font-weight:800; font-family:var(--font-heading);" id="detailPrice">₹2,500</div>
+              <small style="color:#ccfbf1;">per calendar day</small>
+            </div>
+          </div>
+        </div>
+
+        <!-- Specifications Breakdown -->
+        <h3 style="margin-bottom:1rem;">Vehicle Specifications</h3>
+        <div class="specs-detail-table">
+          <div class="specs-card-box">
+            <span class="label">Seating Capacity</span>
+            <div class="val" id="detailSeats">5 Persons</div>
+          </div>
+          <div class="specs-card-box">
+            <span class="label">Transmission</span>
+            <div class="val" id="detailTransmission">Manual</div>
+          </div>
+          <div class="specs-card-box">
+            <span class="label">Fuel Type</span>
+            <div class="val" id="detailFuel">Petrol</div>
+          </div>
+          <div class="specs-card-box">
+            <span class="label">Daily KM Allowance</span>
+            <div class="val" id="detailKmLimit">200 KM / Day</div>
+          </div>
+          <div class="specs-card-box">
+            <span class="label">Extra KM Rate</span>
+            <div class="val" id="detailExtraKm">₹12 / KM</div>
+          </div>
+          <div class="specs-card-box">
+            <span class="label">Security Deposit</span>
+            <div class="val" id="detailDeposit">₹3,000 (Refundable)</div>
+          </div>
+        </div>
+
+        <!-- Key Features Checklist -->
+        <h3 style="margin-top:2rem; margin-bottom:1rem;">Features & Equipment</h3>
+        <div class="features-check-grid" id="detailFeatures">
+          <!-- Populated by JS -->
+        </div>
+
+        <!-- Why Rent This Car -->
+        <div style="background:var(--bg-alt); padding:1.75rem; border-radius:var(--radius-lg); border:1px solid var(--border); margin-top:2rem;">
+          <h3 style="margin-bottom:1rem; color:var(--primary-dark);">Why Rent This Car?</h3>
+          <ul id="detailWhyRent" style="padding-left:1.25rem;">
+            <!-- Populated by JS -->
+          </ul>
+        </div>
+
+        <!-- Required Documents Box -->
+        <div style="border:1px dashed var(--border); padding:1.5rem; border-radius:var(--radius-md); margin-top:2rem;">
+          <h4 style="margin-bottom:0.75rem;">📋 Documents Required at Delivery</h4>
+          <ul style="padding-left:1.25rem; font-size:0.9rem; color:var(--text-muted); line-height:1.6;">
+            <li>Original Indian / International Driving License (Valid)</li>
+            <li>Original Aadhaar Card or Passport for identity check</li>
+            <li>Refundable security deposit via UPI / Cash / Card</li>
+          </ul>
+        </div>
+
+      </div>
+
+      <!-- Right Column: Interactive Booking Form with Live Availability & WhatsApp -->
+      <div class="details-booking-col" style="position:sticky; top:calc(var(--header-height) + 1.5rem);">
+        <div class="booking-widget">
+          <h2 class="widget-title" style="font-size:1.3rem;">Reserve This Car</h2>
+          <p class="widget-subtitle">Check dates & book directly with our Dehradun team</p>
+
+          <!-- Live Server Availability Indicator -->
+          <div id="detailAvailabilityStatus" style="margin-bottom:1rem;"></div>
+
+          <form id="detailBookingForm" class="widget-form">
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="detailPickupDate">📅 Pickup Date</label>
+                <input type="date" id="detailPickupDate" class="form-control" required>
+              </div>
+              <div class="form-group">
+                <label for="detailDropDate">📅 Drop Date</label>
+                <input type="date" id="detailDropDate" class="form-control" required>
+              </div>
+            </div>
+
+            <div class="form-group">
+              <label for="detailPickupLoc">📍 Pickup Location</label>
+              <select id="detailPickupLoc" class="form-control" required></select>
+            </div>
+
+            <div class="form-group">
+              <label for="detailDropLoc">📍 Drop Location</label>
+              <select id="detailDropLoc" class="form-control" required></select>
+            </div>
+
+            <div class="form-group">
+              <label for="detailCustomerName">👤 Your Full Name</label>
+              <input type="text" name="customer_name" class="form-control" placeholder="e.g. Rahul Sharma" required>
+            </div>
+
+            <div class="form-row-2">
+              <div class="form-group">
+                <label for="detailCustomerPhone">📞 Mobile Number</label>
+                <input type="tel" name="customer_phone" class="form-control" placeholder="10-digit mobile" required>
+              </div>
+              <div class="form-group">
+                <label for="detailCustomerWhatsapp">💬 WhatsApp No.</label>
+                <input type="tel" name="customer_whatsapp" class="form-control" placeholder="WhatsApp no.">
+              </div>
+            </div>
+
+            <!-- Real-Time Price Calculation Summary -->
+            <div id="detailLivePriceBox" class="price-estimate-box" style="display:none;">
+              <div class="estimate-row">
+                <span>Duration:</span>
+                <strong id="liveDetailDays">1 Day</strong>
+              </div>
+              <div class="estimate-row">
+                <span>Rental Charge:</span>
+                <strong id="liveDetailRental">₹2,500</strong>
+              </div>
+              <div class="estimate-row">
+                <span>Refundable Deposit:</span>
+                <strong id="liveDetailDeposit">₹3,000</strong>
+              </div>
+              <div class="estimate-row estimate-total">
+                <span>Estimated Total:</span>
+                <span id="liveDetailTotal">₹5,500</span>
+              </div>
+            </div>
+
+            <button type="submit" class="btn btn-primary btn-block btn-lg" style="margin-top:0.5rem;">
+              Confirm Booking Request ➔
+            </button>
+
+            <a id="detailWaBtn" href="https://wa.me/918923665501" target="_blank" rel="noopener" class="btn btn-whatsapp btn-block">
+              💬 Book on WhatsApp (+91 8923665501)
+            </a>
+
+            <a id="detailCallBtn" href="tel:+918923665501" class="btn btn-outline btn-block">
+              📞 Direct Call to Dispatch
+            </a>
+          </form>
+        </div>
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="color:#fff;margin-bottom:1rem;">
+          <div class="logo-icon">🚗</div>
+          <div>Car Rental <span class="highlight">Dehradun</span></div>
+        </div>
+        <p>Premium self-drive car rentals in Dehradun & Uttarakhand with 200 KM daily allowance and zero hidden charges.</p>
+        <p><strong>Website:</strong> <a href="https://car-rental-dehradun.com" style="color:var(--accent)">car-rental-dehradun.com</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Our Cars</a></li>
+          <li><a href="book.html">Book Now</a></li>
+          <li><a href="terms.html">Rental Terms</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span>📞</span>
+          <div><a href="tel:+918923665501">+91 8923665501</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <span>💬</span>
+          <div><a href="https://wa.me/918923665501" target="_blank" rel="noopener">+91 8923665501</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <span>🏢</span>
+          <div style="font-size:0.85rem; line-height:1.4;">
+            Kalika Vihar Phase 2, Banjarawala Road, Near Kali Mata Mandir, Dehradun – 248001<br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kalika+Vihar+Phase+2+Banjarawala+Road+Near+Kali+Mata+Mandir+Dehradun+Uttarakhand+248001" target="_blank" rel="noopener" style="color:var(--accent); font-size:0.8rem;">📍 View on Google Maps ➔</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Car Rental Dehradun. All rights reserved.</div>
+      <div><a href="admin/login.html" style="color:#64748b;">Admin Portal</a></div>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Mobile Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="https://wa.me/918923665501" target="_blank" rel="noopener" class="btn btn-whatsapp">
+      <span>💬 WhatsApp</span>
+    </a>
+    <a href="tel:+918923665501" class="btn btn-call">
+      <span>📞 Call</span>
+    </a>
+    <a href="#detailBookingForm" class="btn btn-primary">
+      <span>🚗 Book Now</span>
+    </a>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/pwa.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initCarDetailsPage();
+    });
+  </script>
+</body>
+</html>

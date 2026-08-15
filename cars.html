@@ -1,0 +1,195 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Our Cars & Pricing | Self Drive Car Rental Dehradun</title>
+  <meta name="description" content="Explore our complete self-drive car fleet in Dehradun. Maruti Swift Dzire, Thar 4x4, Scorpio N, Ertiga 7-seater, Kia Sonet, Baleno & Hyundai i20. 200 KM daily allowance.">
+  <link rel="canonical" href="https://car-rental-dehradun.com/cars.html">
+
+  <!-- Open Graph -->
+  <meta property="og:type" content="website">
+  <meta property="og:url" content="https://car-rental-dehradun.com/cars.html">
+  <meta property="og:title" content="Our Cars & Fleet Pricing | Car Rental Dehradun">
+  <meta property="og:description" content="Compare car rental prices in Dehradun. Transparent daily rates, 200 KM/day allowance, zero hidden fees.">
+  <meta property="og:image" content="https://car-rental-dehradun.com/images/icons/icon-512.png">
+
+  <!-- PWA & Favicon -->
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="theme-color" content="#0f766e">
+  <link rel="icon" type="image/png" href="images/icons/icon-192.png">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <!-- Offline Status Banner -->
+  <div id="offlineBanner" class="offline-banner">
+    ⚠️ You are offline. Cached cars are viewable. Internet is required for real-time booking confirmation.
+  </div>
+
+  <!-- Header -->
+  <header class="site-header">
+    <div class="container header-container">
+      <a href="index.html" class="brand-logo">
+        <div class="logo-icon">🚗</div>
+        <div>Car Rental <span class="highlight">Dehradun</span></div>
+      </a>
+
+      <nav class="nav-links">
+        <a href="index.html">Home</a>
+        <a href="cars.html" class="active">Our Cars</a>
+        <a href="locations/index.html">Locations</a>
+        <a href="destinations/index.html">Destinations</a>
+        <a href="travel-guides/index.html">Travel Guides</a>
+        <a href="book.html">Book Now</a>
+        <a href="contact.html">Contact</a>
+      </nav>
+
+      <div class="header-actions">
+        <a href="tel:+918923665501" class="header-phone-btn">
+          <span>📞</span>
+          <span class="phone-text">+91 8923665501</span>
+        </a>
+        <a href="https://wa.me/918923665501" target="_blank" rel="noopener" class="btn btn-whatsapp btn-sm">
+          <span>💬 WhatsApp</span>
+        </a>
+        <button class="mobile-menu-toggle" id="mobileMenuToggle" aria-label="Open Menu">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="mobile-nav-drawer" id="mobileNavDrawer">
+    <div class="mobile-nav-content">
+      <a href="index.html">🏠 Home</a>
+      <a href="cars.html" class="active">🚗 Our Cars & Pricing</a>
+      <a href="locations/index.html">📍 Rental Locations</a>
+      <a href="destinations/index.html">⛰️ Destinations</a>
+      <a href="travel-guides/index.html">📖 Travel Guides</a>
+      <a href="book.html">📅 Book a Car</a>
+      <a href="terms.html">📋 Rental Terms & Documents</a>
+      <a href="faq.html">❓ FAQs</a>
+      <a href="contact.html">📞 Contact Us</a>
+    </div>
+  </div>
+
+  <!-- Page Header Banner -->
+  <section style="background:linear-gradient(135deg, #042f2e, #0f766e); color:#fff; padding:3rem 0; text-align:center;">
+    <div class="container">
+      <h1 style="color:#fff; margin-bottom:0.5rem;">Our Self-Drive Car Fleet</h1>
+      <p style="color:#ccfbf1; font-size:1.1rem; max-width:650px; margin:0 auto;">
+        Choose from our wide range of hatchbacks, sedans, 7-seater MUVs, and 4x4 SUVs for your Dehradun & Uttarakhand journey.
+      </p>
+    </div>
+  </section>
+
+  <!-- Main Fleet Section -->
+  <main class="section">
+    <div class="container">
+      
+      <!-- Filter and Search Toolbar -->
+      <div class="fleet-toolbar">
+        <div class="filter-pills">
+          <button class="filter-btn active" data-category="all">All Vehicles</button>
+          <button class="filter-btn" data-category="SUV">SUVs</button>
+          <button class="filter-btn" data-category="Sedan">Sedans</button>
+          <button class="filter-btn" data-category="Hatchback">Hatchbacks</button>
+          <button class="filter-btn" data-category="7-Seater">7-Seaters</button>
+          <button class="filter-btn" data-category="Automatic">Automatic</button>
+        </div>
+
+        <div style="display:flex;gap:0.75rem;align-items:center;flex-grow:1;max-width:400px;">
+          <input type="text" id="carSearchInput" class="form-control" placeholder="🔍 Search Dzire, Thar, Ertiga...">
+          <select id="carSortSelect" class="form-control" style="width:auto;flex-shrink:0;">
+            <option value="featured">Featured</option>
+            <option value="price-low">Price: Low to High</option>
+            <option value="price-high">Price: High to Low</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Fleet Grid -->
+      <div class="fleet-grid" id="fleetGrid">
+        <!-- Loaded dynamically by js/booking.js -->
+      </div>
+
+    </div>
+  </main>
+
+  <!-- Footer -->
+  <footer class="site-footer">
+    <div class="container footer-grid">
+      <div class="footer-brand">
+        <div class="brand-logo" style="color:#fff;margin-bottom:1rem;">
+          <div class="logo-icon">🚗</div>
+          <div>Car Rental <span class="highlight">Dehradun</span></div>
+        </div>
+        <p>Premium self-drive car rentals in Dehradun & Uttarakhand with 200 KM daily allowance and zero hidden charges.</p>
+        <p><strong>Website:</strong> <a href="https://car-rental-dehradun.com" style="color:var(--accent)">car-rental-dehradun.com</a></p>
+      </div>
+
+      <div class="footer-column">
+        <h4>Quick Links</h4>
+        <ul class="footer-links">
+          <li><a href="index.html">Home</a></li>
+          <li><a href="cars.html">Our Cars</a></li>
+          <li><a href="book.html">Book Now</a></li>
+          <li><a href="terms.html">Rental Terms</a></li>
+          <li><a href="contact.html">Contact Us</a></li>
+        </ul>
+      </div>
+
+      <div class="footer-column">
+        <h4>Contact</h4>
+        <div class="footer-contact-item">
+          <span>📞</span>
+          <div><a href="tel:+918923665501">+91 8923665501</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <span>💬</span>
+          <div><a href="https://wa.me/918923665501" target="_blank" rel="noopener">+91 8923665501</a></div>
+        </div>
+        <div class="footer-contact-item">
+          <span>🏢</span>
+          <div style="font-size:0.85rem; line-height:1.4;">
+            Kalika Vihar Phase 2, Banjarawala Road, Near Kali Mata Mandir, Dehradun – 248001<br>
+            <a href="https://www.google.com/maps/search/?api=1&query=Kalika+Vihar+Phase+2+Banjarawala+Road+Near+Kali+Mata+Mandir+Dehradun+Uttarakhand+248001" target="_blank" rel="noopener" style="color:var(--accent); font-size:0.8rem;">📍 View on Google Maps ➔</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="container footer-bottom">
+      <div>&copy; 2026 Car Rental Dehradun. All rights reserved.</div>
+      <div><a href="admin/login.html" style="color:#64748b;">Admin Portal</a></div>
+    </div>
+  </footer>
+
+  <!-- Sticky Bottom Mobile Action Bar -->
+  <div class="mobile-action-bar">
+    <a href="https://wa.me/918923665501" target="_blank" rel="noopener" class="btn btn-whatsapp">
+      <span>💬 WhatsApp</span>
+    </a>
+    <a href="tel:+918923665501" class="btn btn-call">
+      <span>📞 Call</span>
+    </a>
+    <a href="book.html" class="btn btn-primary">
+      <span>🚗 Book Now</span>
+    </a>
+  </div>
+
+  <script src="js/api.js"></script>
+  <script src="js/app.js"></script>
+  <script src="js/booking.js"></script>
+  <script src="js/pwa.js"></script>
+  <script>
+    document.addEventListener('DOMContentLoaded', () => {
+      window.initFleetPage();
+    });
+  </script>
+</body>
+</html>

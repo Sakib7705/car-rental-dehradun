@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /api/admin/
+Disallow: /confirmation.html
+
+Sitemap: https://car-rental-dehradun.com/sitemap.xml
