@@ -1,0 +1,280 @@
+/* ==========================================================================
+   Car Rental Dehradun - Admin Dashboard & Management UI
+   ========================================================================== */
+
+.admin-body {
+  background-color: #f1f5f9;
+  min-height: 100vh;
+  padding-bottom: 0;
+}
+
+.admin-layout {
+  display: grid;
+  grid-template-columns: 1fr;
+  min-height: 100vh;
+}
+
+@media (min-width: 992px) {
+  .admin-layout {
+    grid-template-columns: 260px 1fr;
+  }
+}
+
+/* Sidebar */
+.admin-sidebar {
+  background: var(--bg-dark);
+  color: #fff;
+  padding: 1.5rem 1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.admin-brand {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  font-family: var(--font-heading);
+  font-size: 1.2rem;
+  font-weight: 700;
+  padding: 0.5rem 0.75rem 1.5rem;
+  border-bottom: 1px solid #1e293b;
+  margin-bottom: 1.5rem;
+  color: #fff;
+}
+
+.admin-nav {
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 0.35rem;
+}
+
+.admin-nav a {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  padding: 0.75rem 1rem;
+  border-radius: var(--radius-md);
+  color: #94a3b8;
+  font-weight: 500;
+  font-size: 0.95rem;
+  transition: all var(--transition-fast);
+}
+
+.admin-nav a:hover,
+.admin-nav a.active {
+  background: #1e293b;
+  color: #fff;
+}
+
+.admin-nav a.active {
+  background: var(--primary);
+  color: #fff;
+  font-weight: 600;
+}
+
+.admin-sidebar-footer {
+  margin-top: auto;
+  padding-top: 1.5rem;
+  border-top: 1px solid #1e293b;
+}
+
+/* Admin Main Content */
+.admin-main {
+  display: flex;
+  flex-direction: column;
+  overflow-y: auto;
+}
+
+.admin-topbar {
+  background: #fff;
+  border-bottom: 1px solid var(--border);
+  padding: 1rem 2rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  position: sticky;
+  top: 0;
+  z-index: 10;
+}
+
+.admin-topbar-title {
+  font-size: 1.35rem;
+  font-weight: 700;
+}
+
+.admin-content {
+  padding: 2rem;
+  flex-grow: 1;
+}
+
+/* Stats Cards */
+.stats-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(220px, 1fr));
+  gap: 1.5rem;
+  margin-bottom: 2rem;
+}
+
+.stat-card {
+  background: #fff;
+  padding: 1.5rem;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.stat-info h3 {
+  font-size: 1.8rem;
+  font-weight: 800;
+  color: var(--text-main);
+  margin-bottom: 0.15rem;
+}
+
+.stat-info p {
+  font-size: 0.85rem;
+  color: var(--text-muted);
+  font-weight: 600;
+  text-transform: uppercase;
+}
+
+.stat-icon-wrap {
+  width: 48px;
+  height: 48px;
+  border-radius: var(--radius-md);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1.35rem;
+}
+
+.stat-icon-emerald { background: var(--primary-light); color: var(--primary); }
+.stat-icon-amber { background: var(--accent-light); color: var(--accent); }
+.stat-icon-blue { background: #e0f2fe; color: #0284c7; }
+.stat-icon-slate { background: #f1f5f9; color: #475569; }
+
+/* Admin Data Card & Table */
+.admin-card {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  border: 1px solid var(--border);
+  box-shadow: var(--shadow-sm);
+  overflow: hidden;
+  margin-bottom: 2rem;
+}
+
+.admin-card-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.admin-table-wrap {
+  overflow-x: auto;
+}
+
+.admin-table {
+  width: 100%;
+  border-collapse: collapse;
+  text-align: left;
+}
+
+.admin-table th {
+  background: #f8fafc;
+  padding: 0.85rem 1.25rem;
+  font-size: 0.8rem;
+  font-weight: 700;
+  color: var(--text-muted);
+  text-transform: uppercase;
+  border-bottom: 1px solid var(--border);
+  letter-spacing: 0.04em;
+}
+
+.admin-table td {
+  padding: 1rem 1.25rem;
+  font-size: 0.92rem;
+  border-bottom: 1px solid var(--border);
+  vertical-align: middle;
+}
+
+.admin-table tr:hover td {
+  background: #f8fafc;
+}
+
+/* Status Badges */
+.status-badge {
+  display: inline-flex;
+  align-items: center;
+  padding: 0.25rem 0.65rem;
+  border-radius: var(--radius-full);
+  font-size: 0.78rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.status-New { background: #e0f2fe; color: #0369a1; }
+.status-Pending { background: #fef3c7; color: #b45309; }
+.status-Confirmed { background: #d1fae5; color: #065f46; }
+.status-Cancelled { background: #fee2e2; color: #991b1b; }
+.status-Completed { background: #f1f5f9; color: #475569; }
+
+/* Admin Modal Dialogs */
+.admin-modal-overlay {
+  position: fixed;
+  inset: 0;
+  background: rgba(15, 23, 42, 0.6);
+  backdrop-filter: blur(4px);
+  z-index: 1000;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 1.5rem;
+  opacity: 0;
+  pointer-events: none;
+  transition: opacity var(--transition-normal);
+}
+
+.admin-modal-overlay.open {
+  opacity: 1;
+  pointer-events: auto;
+}
+
+.admin-modal-box {
+  background: #fff;
+  border-radius: var(--radius-lg);
+  width: 100%;
+  max-width: 650px;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: var(--shadow-xl);
+  border: 1px solid var(--border);
+}
+
+.admin-modal-header {
+  padding: 1.25rem 1.5rem;
+  border-bottom: 1px solid var(--border);
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.admin-modal-body {
+  padding: 1.5rem;
+}
+
+.admin-modal-footer {
+  padding: 1rem 1.5rem;
+  border-top: 1px solid var(--border);
+  display: flex;
+  justify-content: flex-end;
+  gap: 0.75rem;
+  background: #f8fafc;
+}
