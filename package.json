@@ -1,0 +1,12 @@
+{
+  "name": "car-rental-dehradun",
+  "version": "1.0.0",
+  "description": "Car rental customer and admin backend",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js"
+  },
+  "engines": {
+    "node": ">=18"
+  }
+}
